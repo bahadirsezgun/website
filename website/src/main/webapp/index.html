@@ -1,10 +1,771 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Selam</title>
-</head>
-<body>
 
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-module="BeinApp as ba" >
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title -->
+    <title> | BeinPlanner</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
+    <link rel="icon" type="image/png" href="images/logos/abasus-ico.png" />
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
+    <link rel="stylesheet" href="vendor/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
+    <link rel="stylesheet" href="styles/style.css">
+
+
+
+
+    <script id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/4ee8d070c7e15b6c2e507d4f5/33b6c886e6d1c5c820002886f.js");</script>
+
+     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+	        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+
+
+
+
+
+
+</head>
+<body class="landing-page"  ng-controller="beinMain as bm" ng-init="init()">
+
+<!-- Simple splash screen-->
+<div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>{{'beinPlannerApp'|translate}}</h1><p>{{'beinPlannerAppComment'|translate}} </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+<!--[if lt IE 7]>
+<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<nav class="navbar navbar-default navbar-fixed-top" >
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          
+                
+             
+            <div class="brand-desc">
+                <a href="index.html" ><img src="images/logos/abasus-logo.png" style="max-height:30px"/> </a>
+               BEINPlanner
+            </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a class="page-scroll" href="#page-top">{{'home'|translate}}</a></li>
+                <li><a class="page-scroll" page-scroll href="#components">{{'packets'|translate}}</a></li>
+                <li><a class="page-scroll" page-scroll href="#features">{{'features'|translate}}</a></li>
+                <li><a class="page-scroll" page-scroll href="#pricing">{{'pricing'|translate}} </a></li>
+
+                 <li><a class="page-scroll" page-scroll href="#clients">{{'reference'|translate}} </a></li>
+                <li><a class="page-scroll" page-scroll href="#contact">{{'contact'|translate}} </a></li>
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <span >{{'lang'|translate}}</span>
+                    </a>
+                    <ul class="dropdown-menu hdropdown animated flipInX">
+                        <div class="title">
+                           {{'chooseLang'|translate}}
+                        </div>
+                        <li>
+                            
+                                <a ng-click="changeLang('en')">English</a>
+                            
+                        </li>
+                        <li>
+                           <a ng-click="changeLang('tr')">Türkçe</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <span >{{'academy'|translate}}</span>
+                    </a>
+                    <ul class="dropdown-menu hdropdown animated flipInX">
+                        <div class="title">
+                           {{'frequentlyAskQuestions'|translate}}
+                        </div>
+                         <li>
+                           <a href="./academy/startup.aspx">{{'startUp'|translate}}</a>
+                        </li>
+                         <li>
+                           <a href="./academy/topview.aspx">{{'topview'|translate}}</a>
+                        </li>
+                        <li>
+                             <a href="./academy/video.aspx">{{'video'|translate}}</a>
+                         </li>
+                        <li>
+                             <a href="./updates/update.aspx">{{'updates'|translate}}</a>
+                         </li>
+                       
+                        
+                    </ul>
+                </li>
+
+
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header id="page-top" >
+    <div class="container">
+        <div class="heading">
+            <h1>
+                {{'welcomeKeepInsideOf'|translate}}
+            </h1>
+            <span>{{'KeepInsideOfAppWith'|translate}}<br/>{{'KeepInsideOfAppWithComment'|translate}}</span>
+            <p class="small">
+                {{'beinPlannerAppComment'|translate}}
+            </p>
+            <a href="/licence/licence.aspx" class="btn btn-success btn-sm">{{'download'|translate}}</a>
+        </div>
+        <div class="heading-image animate-panel" data-child="img-animate" data-effect="fadeInRight" ng-show="showTr">
+            <p class="small">{{'dashboardStatistic'|translate}}</p>
+            <img class="img-animate" src="images/landing/c1t.jpg">
+            <img class="img-animate" src="images/landing/c2t.jpg">
+            <img class="img-animate" src="images/landing/c3t.jpg">
+            <img class="img-animate" src="images/landing/c4t.jpg">
+            <br/>
+            <img class="img-animate" src="images/landing/c5t.jpg">
+            <img class="img-animate" src="images/landing/c6t.jpg">
+            <img class="img-animate" src="images/landing/c7t.jpg">
+            <img class="img-animate" src="images/landing/c8t.jpg">
+        </div>
+        <div class="heading-image animate-panel" data-child="img-animate" data-effect="fadeInRight" ng-show="!showTr">
+            <p class="small">{{'dashboardStatistic'|translate}}</p>
+            <img class="img-animate" src="images/landing/c1e.jpg">
+            <img class="img-animate" src="images/landing/c2e.jpg">
+            <img class="img-animate" src="images/landing/c3e.jpg">
+            <img class="img-animate" src="images/landing/c4e.jpg">
+            <br/>
+            <img class="img-animate" src="images/landing/c5e.jpg">
+            <img class="img-animate" src="images/landing/c6e.jpg">
+            <img class="img-animate" src="images/landing/c7e.jpg">
+            <img class="img-animate" src="images/landing/c8e.jpg">
+        </div>
+    </div>
+</header>
+<section>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h4>{{'security'|translate}}</h4>
+            <p>{{'securityComment'|translate}}</p>
+            <p><a class="navy-link btn btn-sm" href="#" role="button">{{'learnMore'|translate}}</a></p>
+        </div>
+        <div class="col-md-4">
+            <h4>{{'planning'|translate}}</h4>
+            <p>{{'planningComment'|translate}}</p>
+            <p><a class="navy-link btn btn-sm" href="#" role="button">{{'learnMore'|translate}}</a></p>
+        </div>
+        <div class="col-md-4">
+            <h4>{{'statisticalEvaluation'|translate}}</h4>
+            <p>{{'statisticalEvaluationComment'|translate}}</p>
+            <p><a class="navy-link btn btn-sm" href="#" role="button">{{'learnMore'|translate}}</a></p>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="components" class="bg-light" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2><span class="text-success">{{'beinAppFeatures'|translate}} </span></h2>
+                <p>{{'beinAppFeaturesComment'|translate}} </p>
+            </div>
+        </div>
+        <div class="row m-t-md">
+            <div class="col-md-6">
+                <h4 class="m-t-xxxl">{{'personalSale'|translate}}</h4>
+                <p>{{'personalSaleComment'|translate}}</p>
+                <p>{{'personalSaleComment1'|translate}}</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/landing/p1t.jpg" style="max-height: 250px" ng-show="showTr">
+                 <img src="images/landing/p1e.jpg" style="max-height: 250px" ng-show="!showTr">
+            </div>
+        </div>
+        <div class="row m-t-xl">
+            <div class="col-md-6 text-center">
+                <img src="images/landing/p2t.jpg" style="max-height: 250px" ng-show="showTr">
+                 <img src="images/landing/p2e.jpg" style="max-height: 250px" ng-show="!showTr">
+            </div>
+            <div class="col-md-6">
+            	<h4 class="m-t-xxxl">{{'classSale'|translate}}</h4>
+                <p>{{'classSaleComment'|translate}}</p>
+                <p>{{'classSaleComment1'|translate}}</p>
+            </div>
+        </div>
+        <div class="row  m-t-xl">
+            <div class="col-md-6 ">
+                <h4 class="m-t-xxxl">{{'membershipSale'|translate}}</h4>
+                <p>{{'membershipSaleComment'|translate}}</p>
+                <p>{{'membershipSaleComment1'|translate}}</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/landing/p3t.jpg" style="max-height: 250px" ng-show="showTr">
+                 <img src="images/landing/p3e.jpg" style="max-height: 250px" ng-show="!showTr">
+            </div>
+        </div>
+       
+
+    </div>
+</section>
+
+<section id="features" ng-controller="beincontroller">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h2><span class="text-success">{{'manyFeatures'|translate}} </span>{{'featuresList'|translate}}</h2>
+                <p>
+                    {{'manyFeaturesComment'|translate}} 
+                </p>
+            </div>
+        </div>
+        <div class="row m-t-lg">
+            <div class="col-md-4 col-md-offset-2">
+                <strong>{{'ownApp'|translate}}</strong>
+                <p>{{ownAppComment}}</p>
+                <a class="btn btn-success btn-sm" ng-show="!oac" ng-click="ownAppCommentShortChange()">{{'learnMore'|translate}}</a>
+                 <a class="btn btn-success btn-sm" ng-show="oac" ng-click="ownAppCommentChange()">{{'learnMore'|translate}}</a>
+            </div>
+            <div class="col-md-4">
+                <strong>{{'easyBonusCalculation'|translate}}</strong>
+                <p>{{easyBonusCalculationComment}}</p>
+                <a class="btn btn-success btn-sm" ng-show="!ebc" ng-click="easyBonusCalculationShortChange()">{{'learnMore'|translate}}</a>
+                <a class="btn btn-success btn-sm" ng-show="ebc" ng-click="easyBonusCalculationChange()">{{'learnMore'|translate}}</a>
+            </div>
+        </div>
+        <div class="row m-t-lg">
+            <div class="col-md-4 col-md-offset-2">
+                <strong>{{'expenseTracking'|translate}}</strong>
+                <p>{{expenseTrackingComment}}</p>
+                <a class="btn btn-success btn-sm" ng-show="!et" ng-click="expenseTrackingShortChange()">{{'learnMore'|translate}}</a>
+                <a class="btn btn-success btn-sm" ng-show="et" ng-click="expenseTrackingChange()">{{'learnMore'|translate}}</a>
+            </div>
+            <div class="col-md-4">
+                <strong>{{'potantialTracking'|translate}}</strong>
+                <p>{{potantialTrackingComment}}</p>
+                 <a class="btn btn-success btn-sm" ng-show="!pt" ng-click="potantialTrackingShortChange()">{{'learnMore'|translate}}</a>
+                <a class="btn btn-success btn-sm" ng-show="pt" ng-click="potantialTrackingChange()">{{'learnMore'|translate}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features2" class="bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h2><span class="text-success">{{'app'|translate}} </span>{{'appFeatures'|translate}}</h2>
+                <p>{{'appFeaturesComment'|translate}}</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <h4 class="m-t-lg"><i class="pe-7s-airplay text-success icon-big"></i></h4>
+                <strong>{{'planning'|translate}}</strong>
+                <p>{{'planningComment'|translate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="m-t-lg"><i class="pe-7s-science text-success icon-big"></i></h4>
+                 <strong>{{'payment'|translate}}</strong>
+                <p>{{'paymentComment'|translate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="m-t-lg"><i class="pe-7s-display1 text-success icon-big"></i></h4>
+                <strong>{{'statistical'|translate}}</strong>
+                <p>{{'statisticalComment'|translate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="m-t-lg"><i class="pe-7s-cloud-upload text-success icon-big"></i></h4>
+                <strong>{{'security'|translate}}</strong>
+                <p>{{'securityComment'|translate}}</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <h4 class="m-t-lg"><i class="pe-7s-global text-success icon-big"></i></h4>
+                <strong>{{'bonus'|translate}}</strong>
+                <p>{{'bonusComment'|translate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="m-t-lg"><i class="pe-7s-battery text-success icon-big"></i></h4>
+                <strong>{{'shortPayment'|translate}}</strong>
+                <p>{{'shortPaymentComment'|translate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="m-t-lg"><i class="pe-7s-users text-success icon-big"></i></h4>
+                <strong>{{'memberTracking'|translate}}</strong>
+                <p>{{'memberTrackingComment'|translate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="m-t-lg"><i class="pe-7s-ticket text-success icon-big"></i></h4>
+                <strong>{{'calendar'|translate}}</strong>
+                <p>{{'calendarComment'|translate}}</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section id="pricing" class="bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h2><span class="text-success">{{'bestPricing'|translate}} </span>{{'forYourApp'|translate}}</h2>
+                <p>{{'bestPricingComment'|translate}}</p>
+            </div>
+        </div>
+
+        <div class="row m-t-lg">
+            <div class="col-lg-3">
+                <ul class="pricing-plan list-unstyled">
+                    <li class="pricing-title">
+                        {{'basic'|translate}}
+                    </li>
+                   
+                     <li>
+                        <span class="text-success"> $0.021/{{'hour'|translate}} ($160.00 {{'annual'|translate}})</span>
+                    </li>
+                    <li>
+                        <span class="text-success"> AWS $0.012/{{'hour'|translate}} t2.micro (N.Virginia)</span>
+                    </li>
+                    <li>
+                        <span class="text-warning">{{1+" "+('studio'|translate)}}</span>
+                    </li>
+                    <li>
+                        <span class="text-danger">{{1+" "+('instructor'|translate)}}</span>
+                    </li>
+                    <li class="text-success">
+                       <span class="text-success"> {{('individual'|translate)}}</span>
+                    </li>
+                    <li>
+                        {{'dashboards'|translate}}
+                    </li>
+                    <li>
+                        {{'paketSale'|translate}}
+                    </li>
+                    <li>
+                        {{'contacts'|translate}}
+                    </li>
+                    <li>
+                        {{'calendar'|translate}}
+                    </li>
+                    <li>
+                        {{'paymentTracking'|translate}}
+                    </li>
+                     <li>
+                        {{'specialDates'|translate}}
+                    </li>
+                    <li>
+                        {{'unlimitedMember'|translate}}
+                    </li>
+                   
+                    <li>
+                        <a class="btn btn-primary btn-sm" href="http://aws.amazon.com/marketplace/pp/B07519GZJW" target="_blank">{{'buy'|translate}}</a>
+                    </li>
+                        
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <ul class="pricing-plan list-unstyled selected">
+                     <li class="pricing-title">
+                        {{'standard'|translate}}
+                    </li>
+                   
+                   
+                    <li>
+                        <span class="text-success"> $0.035/{{'hour'|translate}} ($265.00 {{'annual'|translate}})</span>
+                    </li>
+                    <li >
+                        <span class="text-success"> AWS $0.012/{{'hour'|translate}} t2.micro (N.Virginia)</span>
+                    </li>
+
+                    <li>
+                       <span class="text-warning"> {{1+" "+('studio'|translate)}}</span>
+                    </li>
+                    <li>
+                        <span class="text-danger">{{3+" "+('instructor'|translate)}}</span>
+                    </li>
+                    <li class="text-success">
+                        <span class="text-success">{{('individual'|translate)+","+('group'|translate)}}</span>
+                    </li>
+                    <li>
+                        {{'dashboards'|translate}}
+                    </li>
+                    <li>
+                        {{'paketSale'|translate}}
+                    </li>
+                    <li>
+                        {{'contacts'|translate}}
+                    </li>
+                    <li>
+                        {{'calendar'|translate}}
+                    </li>
+                    <li>
+                        {{'paymentTracking'|translate}}
+                    </li>
+                     <li>
+                        {{'specialDates'|translate}}
+                    </li>
+                    <li>
+                        {{'unlimitedMember'|translate}}
+                    </li>
+                     
+                    <li>
+                        <a class="btn btn-primary btn-sm" href="http://aws.amazon.com/marketplace/pp/B074ZDWY48" target="_blank">{{'buy'|translate}}</a>
+                    </li>
+                       
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <ul class="pricing-plan list-unstyled">
+                     <li class="pricing-title">
+                        {{'premium'|translate}}
+                    </li>
+                   
+                     <li >
+                        <span class="text-success"> $0.12/{{'hour'|translate}} ($900.00 {{'annual'|translate}})</span>
+                    </li>
+                    <li>
+                        <span class="text-success"> AWS $0.012/{{'hour'|translate}} t2.micro (N.Virginia)</span>
+                    </li>
+                    <li>
+                        <span class="text-warning">{{2+" "+('studio'|translate)}}</span>
+                    </li>
+                    <li>
+                        <span class="text-danger">{{15+" "+('instructor'|translate)}}</span>
+                    </li>
+                    <li class="text-success">
+                        <span class="text-success">{{('individual'|translate)+","+('group'|translate)+","+('membership'|translate)}}</span>
+                    </li>
+                    <li>
+                        {{'dashboards'|translate}}
+                    </li>
+                    <li>
+                        {{'paketSale'|translate}}
+                    </li>
+                    <li>
+                        {{'contacts'|translate}}
+                    </li>
+                    <li>
+                        {{'calendar'|translate}}
+                    </li>
+                    <li>
+                        {{'paymentTracking'|translate}}
+                    </li>
+                     <li>
+                        {{'specialDates'|translate}}
+                    </li>
+                    <li>
+                        {{'unlimitedMember'|translate}}
+                    </li>
+                      
+                    <li>
+                        <a class="btn btn-primary btn-sm" href="http://aws.amazon.com/marketplace/pp/B074ZFM3RJ" target="_blank">{{'buy'|translate}}</a>
+                    </li>
+                        
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <ul class="pricing-plan list-unstyled">
+                     <li class="pricing-title">
+                        {{'prestige'|translate}}
+                    </li>
+                  
+                    <li>
+                        <span class="text-success"> $0.15/{{'hour'|translate}} ($1,150.00 {{'annual'|translate}})</span>
+                    </li>
+                    <li>
+                        <span class="text-success"> AWS $0.012/{{'hour'|translate}} t2.micro (N.Virginia)</span>
+                    </li>
+                    <li>
+                        <span class="text-warning"> {{2+" "+('studio'|translate)}}</span>
+                    </li>
+
+                    <li>
+                        <span class="text-danger"> {{('instructorUnlimited'|translate)}}</span>
+                    </li>
+                    <li class="text-success">
+                        <span class="text-success"> {{('individual'|translate)+","+('group'|translate)+","+('membership'|translate)}}</span>
+                    </li>
+                    <li>
+                        {{'dashboards'|translate}}
+                    </li>
+                    <li>
+                        {{'paketSale'|translate}}
+                    </li>
+                    <li>
+                        {{'contacts'|translate}}
+                    </li>
+                    <li>
+                        {{'calendar'|translate}}
+                    </li>
+                    <li>
+                        {{'paymentTracking'|translate}}
+                    </li>
+                     <li>
+                        {{'specialDates'|translate}}
+                    </li>
+                    <li>
+                        {{'unlimitedMember'|translate}}
+                    </li>
+                    
+                    <li>
+                        <a class="btn btn-primary btn-sm" href="http://aws.amazon.com/marketplace/pp/B074ZJD8K4" target="_blank">{{'buy'|translate}}</a>
+                    </li>
+                        
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="clients">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6 col-md-offset-3">
+                <h2><span class="text-success">{{'ourBest'|translate}}</span> {{'clients'|translate}}</h2>
+                <p>
+                    {{'ourBestComment'|translate}}
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center m-t-lg">
+            <div class="col-md-6 col-md-offset-3">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="client"><img class="img-responsive" src="images/clients/pilatesystem.png" /></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="client"><img class="img-responsive" src="images/clients/pp.jpg" /></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="client"><img class="img-responsive" src="images/clients/profit.png" /></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="client"><img class="img-responsive" src="images/clients/studio135.jpg" /></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="client"><img class="img-responsive" src="images/clients/stylelife.jpg" /></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="client"><img class="img-responsive" src="images/clients/bodyproject.jpg" /></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section id="contact" class="bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6 col-md-offset-3">
+                <h2><span class="text-success">{{'contactWithUs'|translate}}</span> {{'anytime'|translate}}</h2>
+                <p>
+                    {{'contactWithUsComment'|translate}}
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center m-t-lg" >
+            <div class="col-md-5 ">
+                <div class="hpanel">
+                  <div class="panel-body" >
+                    <div id="mc_embed_signup">
+                        <form action="//beinplanner.us16.list-manage.com/subscribe/post?u=4ee8d070c7e15b6c2e507d4f5&amp;id=7f64831b13" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+	                        <h2>Subscribe to our mailing list</h2>
+                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                        <div class="mc-field-group">
+	                        <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                        </label>
+	                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        </div>
+                        <div class="mc-field-group">
+	                        <label for="mce-FNAME">First Name </label>
+	                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                        </div>
+                        <div class="mc-field-group">
+	                        <label for="mce-LNAME">Last Name </label>
+	                        <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                        </div>
+	                        <div id="mce-responses" class="clear">
+		                        <div class="response" id="mce-error-response" style="display:none"></div>
+		                        <div class="response" id="mce-success-response" style="display:none"></div>
+	                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4ee8d070c7e15b6c2e507d4f5_7f64831b13" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                            </div>
+                        </form>
+                        </div>
+                </div>
+             
+                
+                </div>
+             </div>
+            
+            <div class="col-md-4 ">
+              <div class="hpanel">
+                  <div class="panel-body">
+                <form class="form-horizontal" runat="server">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label" >{{'yourName'|translate}}</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" runat="server" id="name" placeholder="{{'yourFullName'|translate}}" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">{{'yourMail'|translate}}</label>
+
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" runat="server" id="from" name="email" placeholder="{{'yourEmail'|translate}}" value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="col-sm-2 control-label">{{'yourMessage'|translate}}</label>
+
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="3" name="message" runat="server" id="message"  placeholder="{{'yourMessageHere'|translate}}"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                          <img height="30" class="pull-left" alt="" src="captha.aspx" width="80" />
+                          <input type="text" class="form-control" placeholder="{{'writeWhatYouSee'|translate}}" id="txtTuring" runat="server"/>
+                          <label class="col-sm-12" id="result" runat="server"></label>
+                           
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <div class="col-sm-12">           
+                            <button type="button" class="btn btn-primary btn-lg" id="sendBtn" runat="server" onserverclick="sendBtn_ServerClick1">{{'sendUsMessage'|translate}}</button>
+                        </div>
+                    </div>
+                </form>
+              </div>
+             </div>
+            </div>
+            <div class="col-md-3 text-left">
+             <div class="hpanel">
+                  <div class="panel-body">
+                   <address>
+                    <strong><span class="navy">ABASUS, Ltd.</span></strong><br/>
+                    Avlu Apt., No:2<br/>
+                    Maltepe, İstanbul 34101<br/>
+                    <abbr title="Email">email:</abbr> info@beinplanner.com
+                </address>
+                <p class="text-color">
+                    {{'addressComment'|translate}}
+                </p>
+            </div>
+        </div>
+             </div>
+        </div>
+    
+
+    </div>
+</section>
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+
+
+
+
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js"></script>
+<script src="vendor/iCheck/icheck.min.js"></script>
+<script src="vendor/sparkline/index.js"></script>
+
+<!-- App scripts -->
+<script src="scripts/homer.js"></script>
+
+
+
+
+<!-- Local script for menu handle -->
+<!-- It can be also directive -->
+<script>
+    $(document).ready(function () {
+
+        // Page scrolling feature
+        $('a.page-scroll').bind('click', function (event) {
+            var link = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(link.attr('href')).offset().top - 50
+            }, 500);
+            event.preventDefault();
+        });
+
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 80
+        });
+
+    });
+</script>
+
+
+<script data-main="./app/main/main.js" src="./jslib/lib/require/require.js"></script>
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-105290004-1', 'auto');
+        ga('send', 'pageview');
+
+</script>
 </body>
 </html>
