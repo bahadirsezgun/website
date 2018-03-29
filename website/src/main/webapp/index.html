@@ -77,7 +77,7 @@
 
                  <li><a class="page-scroll" page-scroll href="#clients">{{'reference'|translate}} </a></li>
                 <li><a class="page-scroll" page-scroll href="#contact">{{'contact'|translate}} </a></li>
-                
+                <li><a  href="https://api.beinplanner.com/appplans">{{'seeAllPackets'|translate}} </a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
                         <span >{{'lang'|translate}}</span>
@@ -98,7 +98,7 @@
                     </ul>
                 </li>
 
-                <li class="dropdown">
+               <!--  <li class="dropdown">
                     <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
                         <span >{{'academy'|translate}}</span>
                     </a>
@@ -121,7 +121,7 @@
                        
                         
                     </ul>
-                </li>
+                </li> -->
 
 
                
@@ -140,32 +140,16 @@
             <p class="small">
                 {{'beinPlannerAppComment'|translate}}
             </p>
-            <a href="/licence/licence.aspx" class="btn btn-success btn-sm">{{'download'|translate}}</a>
+            <a href="/licence/licence.aspx" class="btn btn-primary2 btn-sm">{{'download'|translate}}</a>
+            
+            <a href="https://api.beinplanner.com/appplans" class="btn btn-success btn-sm">{{'seeAllPackets'|translate}}</a>
         </div>
-        <div class="heading-image animate-panel" data-child="img-animate" data-effect="fadeInRight" ng-show="showTr">
+        <div class="animate-panel pull-right" data-child="img-animate">
             <p class="small">{{'dashboardStatistic'|translate}}</p>
-            <img class="img-animate" src="images/landing/c1t.jpg">
-            <img class="img-animate" src="images/landing/c2t.jpg">
-            <img class="img-animate" src="images/landing/c3t.jpg">
-            <img class="img-animate" src="images/landing/c4t.jpg">
-            <br/>
-            <img class="img-animate" src="images/landing/c5t.jpg">
-            <img class="img-animate" src="images/landing/c6t.jpg">
-            <img class="img-animate" src="images/landing/c7t.jpg">
-            <img class="img-animate" src="images/landing/c8t.jpg">
+            <img  src="images/landing/heading.jpg">
+          
         </div>
-        <div class="heading-image animate-panel" data-child="img-animate" data-effect="fadeInRight" ng-show="!showTr">
-            <p class="small">{{'dashboardStatistic'|translate}}</p>
-            <img class="img-animate" src="images/landing/c1e.jpg">
-            <img class="img-animate" src="images/landing/c2e.jpg">
-            <img class="img-animate" src="images/landing/c3e.jpg">
-            <img class="img-animate" src="images/landing/c4e.jpg">
-            <br/>
-            <img class="img-animate" src="images/landing/c5e.jpg">
-            <img class="img-animate" src="images/landing/c6e.jpg">
-            <img class="img-animate" src="images/landing/c7e.jpg">
-            <img class="img-animate" src="images/landing/c8e.jpg">
-        </div>
+        
     </div>
 </header>
 <section>
@@ -205,14 +189,12 @@
                 <p>{{'personalSaleComment1'|translate}}</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="images/landing/p1t.jpg" style="max-height: 250px" ng-show="showTr">
-                 <img src="images/landing/p1e.jpg" style="max-height: 250px" ng-show="!showTr">
+                <img src="images/landing/personalclass.png" style="max-height: 350px">
             </div>
         </div>
         <div class="row m-t-xl">
-            <div class="col-md-6 text-center">
-                <img src="images/landing/p2t.jpg" style="max-height: 250px" ng-show="showTr">
-                 <img src="images/landing/p2e.jpg" style="max-height: 250px" ng-show="!showTr">
+            <div class="col-md-6 text-center" >
+                <img src="images/landing/groupclass.png" style="max-height: 350px">
             </div>
             <div class="col-md-6">
             	<h4 class="m-t-xxxl">{{'classSale'|translate}}</h4>
@@ -227,8 +209,7 @@
                 <p>{{'membershipSaleComment1'|translate}}</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="images/landing/p3t.jpg" style="max-height: 250px" ng-show="showTr">
-                 <img src="images/landing/p3e.jpg" style="max-height: 250px" ng-show="!showTr">
+                <img src="images/landing/membershipclass.png" style="max-height: 350px">
             </div>
         </div>
        
@@ -346,207 +327,8 @@
         </div>
 
         <div class="row m-t-lg">
-            <div class="col-lg-3">
-                <ul class="pricing-plan list-unstyled">
-                    <li class="pricing-title">
-                        {{'basic'|translate}}
-                    </li>
-                   
-                     <li>
-                        <span class="text-success"> $0.021/{{'hour'|translate}} ($160.00 {{'annual'|translate}})</span>
-                    </li>
-                    <li>
-                        <span class="text-success"> AWS $0.012/{{'hour'|translate}} t2.micro (N.Virginia)</span>
-                    </li>
-                    <li>
-                        <span class="text-warning">{{1+" "+('studio'|translate)}}</span>
-                    </li>
-                    <li>
-                        <span class="text-danger">{{1+" "+('instructor'|translate)}}</span>
-                    </li>
-                    <li class="text-success">
-                       <span class="text-success"> {{('individual'|translate)}}</span>
-                    </li>
-                    <li>
-                        {{'dashboards'|translate}}
-                    </li>
-                    <li>
-                        {{'paketSale'|translate}}
-                    </li>
-                    <li>
-                        {{'contacts'|translate}}
-                    </li>
-                    <li>
-                        {{'calendar'|translate}}
-                    </li>
-                    <li>
-                        {{'paymentTracking'|translate}}
-                    </li>
-                     <li>
-                        {{'specialDates'|translate}}
-                    </li>
-                    <li>
-                        {{'unlimitedMember'|translate}}
-                    </li>
-                   
-                    <li>
-                        <a class="btn btn-primary btn-sm" href="http://aws.amazon.com/marketplace/pp/B07519GZJW" target="_blank">{{'buy'|translate}}</a>
-                    </li>
-                        
-                </ul>
-            </div>
-
-            <div class="col-lg-3">
-                <ul class="pricing-plan list-unstyled selected">
-                     <li class="pricing-title">
-                        {{'standard'|translate}}
-                    </li>
-                   
-                   
-                    <li>
-                        <span class="text-success"> $0.035/{{'hour'|translate}} ($265.00 {{'annual'|translate}})</span>
-                    </li>
-                    <li >
-                        <span class="text-success"> AWS $0.012/{{'hour'|translate}} t2.micro (N.Virginia)</span>
-                    </li>
-
-                    <li>
-                       <span class="text-warning"> {{1+" "+('studio'|translate)}}</span>
-                    </li>
-                    <li>
-                        <span class="text-danger">{{3+" "+('instructor'|translate)}}</span>
-                    </li>
-                    <li class="text-success">
-                        <span class="text-success">{{('individual'|translate)+","+('group'|translate)}}</span>
-                    </li>
-                    <li>
-                        {{'dashboards'|translate}}
-                    </li>
-                    <li>
-                        {{'paketSale'|translate}}
-                    </li>
-                    <li>
-                        {{'contacts'|translate}}
-                    </li>
-                    <li>
-                        {{'calendar'|translate}}
-                    </li>
-                    <li>
-                        {{'paymentTracking'|translate}}
-                    </li>
-                     <li>
-                        {{'specialDates'|translate}}
-                    </li>
-                    <li>
-                        {{'unlimitedMember'|translate}}
-                    </li>
-                     
-                    <li>
-                        <a class="btn btn-primary btn-sm" href="http://aws.amazon.com/marketplace/pp/B074ZDWY48" target="_blank">{{'buy'|translate}}</a>
-                    </li>
-                       
-                </ul>
-            </div>
-
-            <div class="col-lg-3">
-                <ul class="pricing-plan list-unstyled">
-                     <li class="pricing-title">
-                        {{'premium'|translate}}
-                    </li>
-                   
-                     <li >
-                        <span class="text-success"> $0.12/{{'hour'|translate}} ($900.00 {{'annual'|translate}})</span>
-                    </li>
-                    <li>
-                        <span class="text-success"> AWS $0.012/{{'hour'|translate}} t2.micro (N.Virginia)</span>
-                    </li>
-                    <li>
-                        <span class="text-warning">{{2+" "+('studio'|translate)}}</span>
-                    </li>
-                    <li>
-                        <span class="text-danger">{{15+" "+('instructor'|translate)}}</span>
-                    </li>
-                    <li class="text-success">
-                        <span class="text-success">{{('individual'|translate)+","+('group'|translate)+","+('membership'|translate)}}</span>
-                    </li>
-                    <li>
-                        {{'dashboards'|translate}}
-                    </li>
-                    <li>
-                        {{'paketSale'|translate}}
-                    </li>
-                    <li>
-                        {{'contacts'|translate}}
-                    </li>
-                    <li>
-                        {{'calendar'|translate}}
-                    </li>
-                    <li>
-                        {{'paymentTracking'|translate}}
-                    </li>
-                     <li>
-                        {{'specialDates'|translate}}
-                    </li>
-                    <li>
-                        {{'unlimitedMember'|translate}}
-                    </li>
-                      
-                    <li>
-                        <a class="btn btn-primary btn-sm" href="http://aws.amazon.com/marketplace/pp/B074ZFM3RJ" target="_blank">{{'buy'|translate}}</a>
-                    </li>
-                        
-                </ul>
-            </div>
-
-            <div class="col-lg-3">
-                <ul class="pricing-plan list-unstyled">
-                     <li class="pricing-title">
-                        {{'prestige'|translate}}
-                    </li>
-                  
-                    <li>
-                        <span class="text-success"> $0.15/{{'hour'|translate}} ($1,150.00 {{'annual'|translate}})</span>
-                    </li>
-                    <li>
-                        <span class="text-success"> AWS $0.012/{{'hour'|translate}} t2.micro (N.Virginia)</span>
-                    </li>
-                    <li>
-                        <span class="text-warning"> {{2+" "+('studio'|translate)}}</span>
-                    </li>
-
-                    <li>
-                        <span class="text-danger"> {{('instructorUnlimited'|translate)}}</span>
-                    </li>
-                    <li class="text-success">
-                        <span class="text-success"> {{('individual'|translate)+","+('group'|translate)+","+('membership'|translate)}}</span>
-                    </li>
-                    <li>
-                        {{'dashboards'|translate}}
-                    </li>
-                    <li>
-                        {{'paketSale'|translate}}
-                    </li>
-                    <li>
-                        {{'contacts'|translate}}
-                    </li>
-                    <li>
-                        {{'calendar'|translate}}
-                    </li>
-                    <li>
-                        {{'paymentTracking'|translate}}
-                    </li>
-                     <li>
-                        {{'specialDates'|translate}}
-                    </li>
-                    <li>
-                        {{'unlimitedMember'|translate}}
-                    </li>
-                    
-                    <li>
-                        <a class="btn btn-primary btn-sm" href="http://aws.amazon.com/marketplace/pp/B074ZJD8K4" target="_blank">{{'buy'|translate}}</a>
-                    </li>
-                        
-                </ul>
+            <div class="col-lg-12 text-center">
+			 <a href="https://api.beinplanner.com/appplans" class="btn btn-success btn-lg">{{'seeAllPackets'|translate}}</a>            
             </div>
         </div>
 
@@ -578,7 +360,7 @@
                         <div class="client"><img class="img-responsive" src="images/clients/profit.png" /></div>
                     </div>
                     <div class="col-md-6">
-                        <div class="client"><img class="img-responsive" src="images/clients/studio135.jpg" /></div>
+                        <div class="client"><img class="img-responsive" src="images/clients/Studio135.jpg" /></div>
                     </div>
                     <div class="col-md-6">
                         <div class="client"><img class="img-responsive" src="images/clients/stylelife.jpg" /></div>
@@ -609,92 +391,31 @@
         </div>
 
         <div class="row text-center m-t-lg" >
-            <div class="col-md-5 ">
-                <div class="hpanel">
-                  <div class="panel-body" >
-                    <div id="mc_embed_signup">
-                        <form action="//beinplanner.us16.list-manage.com/subscribe/post?u=4ee8d070c7e15b6c2e507d4f5&amp;id=7f64831b13" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            <div id="mc_embed_signup_scroll">
-	                        <h2>Subscribe to our mailing list</h2>
-                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                        <div class="mc-field-group">
-	                        <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-                        </label>
-	                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                        </div>
-                        <div class="mc-field-group">
-	                        <label for="mce-FNAME">First Name </label>
-	                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-                        </div>
-                        <div class="mc-field-group">
-	                        <label for="mce-LNAME">Last Name </label>
-	                        <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-                        </div>
-	                        <div id="mce-responses" class="clear">
-		                        <div class="response" id="mce-error-response" style="display:none"></div>
-		                        <div class="response" id="mce-success-response" style="display:none"></div>
-	                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4ee8d070c7e15b6c2e507d4f5_7f64831b13" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                            </div>
-                        </form>
-                        </div>
-                </div>
-             
-                
-                </div>
-             </div>
             
-            <div class="col-md-4 ">
-              <div class="hpanel">
-                  <div class="panel-body">
-                <form class="form-horizontal" runat="server">
-                    <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label" >{{'yourName'|translate}}</label>
-
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" runat="server" id="name" placeholder="{{'yourFullName'|translate}}" value="">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">{{'yourMail'|translate}}</label>
-
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" runat="server" id="from" name="email" placeholder="{{'yourEmail'|translate}}" value=""/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="col-sm-2 control-label">{{'yourMessage'|translate}}</label>
-
-                        <div class="col-sm-10">
-                            <textarea class="form-control" rows="3" name="message" runat="server" id="message"  placeholder="{{'yourMessageHere'|translate}}"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                          <img height="30" class="pull-left" alt="" src="captha.aspx" width="80" />
-                          <input type="text" class="form-control" placeholder="{{'writeWhatYouSee'|translate}}" id="txtTuring" runat="server"/>
-                          <label class="col-sm-12" id="result" runat="server"></label>
-                           
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        <div class="col-sm-12">           
-                            <button type="button" class="btn btn-primary btn-lg" id="sendBtn" runat="server" onserverclick="sendBtn_ServerClick1">{{'sendUsMessage'|translate}}</button>
-                        </div>
-                    </div>
-                </form>
-              </div>
-             </div>
+            
+            <div class="col-md-8 ">
+              <div id="map" style="min-height: 250px;width: 100%"></div>
+             
+			    <script>
+			      var map;
+			      function initMap() {
+			        map = new google.maps.Map(document.getElementById('map'), {
+			          center: {lat: 40.947695, lng: 29.153981},
+			          zoom: 15
+			        });
+			      }
+			    </script>
+			    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Toqy6-1unLQGemFk4hJE0yl7vNqvkdw&callback=initMap"
+			    async defer></script>
             </div>
-            <div class="col-md-3 text-left">
+            <div class="col-md-4 text-left">
              <div class="hpanel">
                   <div class="panel-body">
                    <address>
                     <strong><span class="navy">ABASUS, Ltd.</span></strong><br/>
                     Avlu Apt., No:2<br/>
                     Maltepe, İstanbul 34101<br/>
-                    <abbr title="Email">email:</abbr> info@beinplanner.com
+                    <abbr title="Email">email:</abbr> info@abasus.com.tr
                 </address>
                 <p class="text-color">
                     {{'addressComment'|translate}}
@@ -707,9 +428,6 @@
 
     </div>
 </section>
-
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
 
 
 
@@ -751,6 +469,9 @@
     });
 </script>
 
+	
+    
+    
 
 <script data-main="./app/main/main.js" src="./jslib/lib/require/require.js"></script>
 
