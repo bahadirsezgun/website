@@ -192,7 +192,8 @@ changes76: "In general, the calendar has been changed.",
 changes761: "The calendar has been configured so that the clock ranges are dynamically arranged. Click the Calendar Clock link under the Settings menu, you can set the calendar that appears to suit you by selecting the ending, the calendar time interval, and the course duration.",
 changes762: "Cancellation function has been added for lesson plans. You can cancel the plan instead of deleting it and see the canceled course in yellow color.",
 changes763: "The plans that appear on the calendar are colored. Principle Course Green, Last Course red and canceled courses are shown in yellow color.",
-seeAllPackets:"Inspect All Packets Features To Buy"
+seeAllPackets:"Inspect All Packets Features To Buy",
+login:"Login"
 
 
 

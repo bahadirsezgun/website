@@ -197,7 +197,8 @@ changes76: "Genel olarak takvim üzerinde değişiklik yapılmıştır.",
 changes761: "Takvim saat aralıkları dinamik olarak düzenlenecek biçimde yapılmıştır. Ayarlar menüsü altında Takvim Saatleri linkine tıklayıp, açılan ekranda başlama, bitiş,takvim saat aralığı ve ders süresini seçerek size uygun gözüken takviminizi ayarlayabilirsiniz.",
 changes762: "Ders planlamaları için İptal fonksiyonu eklenmiştir. Planlamayı silmek yerine iptal edebilirsiniz ve iptal edilen dersi Sarı renk ile görebilirsiniz.",
 changes763: "Takvim üzerinde görünen planlamalar renklendirilmiştir. İlke ders Yeşil  , Son ders kırmızı ve iptal edilen dersler sarı renk ile gösterilmektedir.",
-seeAllPackets:"Tüm Fiyatlandırmaları İnceleyin"
+seeAllPackets:"Tüm Fiyatlandırmaları İnceleyin",
+login:"Giriş"
 
 
 
